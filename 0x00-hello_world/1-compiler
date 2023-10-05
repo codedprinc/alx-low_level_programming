@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc 1-main.c -c main.o | CFILE=1-main.c
+gcc 1-main.c -c 1-main.o | CFILE=1-main.c
