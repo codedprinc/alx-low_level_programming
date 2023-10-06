@@ -1,0 +1,23 @@
+#include <stdio.h>
+/**
+ * main - entry point
+ * @void: no arg
+ *
+ * Desctiption: puts small alphabets
+ *
+ * Return: A value of 0
+ */
+
+int main(void)
+{
+	char az = 'a';
+
+	while (az <= 'z')
+	{
+		putchar(az);
+		az++;
+	}
+
+	putchar("\n");
+	return (0);
+}
