@@ -10,18 +10,12 @@
  */
 int _isalpha(int c)
 {
-	char lower, upper;
-	int letter = 0;
-
-	for (lower = 'a'; lower <= 'z'; lower++)
+	if (c <= 122 && c >= 65)
 	{
-		for (upper = 'A'; upper <= 'Z'; upper++)
-		{
-			if (lower == c || upper == c)
-			{
-				letter = 1;
-			}
-		}
+		return (1);
 	}
-	return (letter);
+	else
+	{
+		return (0);
+	}
 }
