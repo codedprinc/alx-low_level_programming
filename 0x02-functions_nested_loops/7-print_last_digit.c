@@ -3,22 +3,24 @@
  * print_last_digit - prints last digit
  * Description: prints last digit
  *
- * @r: an integer input
+ * @d: an integer input
  *
  * Return: always 0
  */
-int print_last_digit(int r)
+int print_last_digit(int d)
 {
-	int i;
-
-	if (r < 0)
+	if (d < 0)
 	{
-		i = -1 * (r % 10);
+		d = (d * -1) % 10;
+		return (d);
+	}
+	else if (d > 0)
+	{
+		d %= 10;
+		return (d);
 	}
 	else
 	{
-		i = r % 10;
+		return (0);
 	}
-	_putchar((i % 10) + '0');
-	return (i % 10);
 }
