@@ -10,13 +10,15 @@
  */
 int _islower(int c)
 {
-	if (c >= 97 && c <= 122)
+	char i;
+	int lower = 0;
+
+	for (i = 'a'; i <= 'z'; i++)
 	{
-		return (1);
+		if (i == c)
+		{
+		lower  = 1;
+		}
 	}
-	else
-	{
-		return (0);
-	}
-	return (_islower);
+	return (lower);
 }
