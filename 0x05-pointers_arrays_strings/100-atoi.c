@@ -12,7 +12,7 @@ int _atoi(char *s)
 
 	unsigned int num = 0;
 
-	do{
+	do {
 		if (*s == '-')
 			i *= -1;
 		else if (*s >= '0' && *s <= '9')
