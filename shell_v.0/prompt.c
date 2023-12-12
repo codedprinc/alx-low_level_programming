@@ -15,7 +15,7 @@ void prompt(void)
 
 	while (1)
 	{
-		printf("$ ");
+		write(1, "$ ", 2);
 		nread = getline(&line, &len, stdin);
 
 		if (nread == -1)
@@ -42,7 +42,18 @@ void prompt(void)
 			}
 			else if (child_pid == 0)
 			{
-				if (execve(argv[0], argv, NULL) == -1)
+/*				if (findfile(argv[0]) == 0)
+				{
+					printf("%s found in PATH.\n", argv[0]);
+					exit(EXIT_SUCCESS);
+				}
+				else
+				{
+					perror("command not found:");
+					exit(EXIT_FAILURE);
+					}*/
+				extern char **environ;
+				if (execve(argv[0], argv, environ) == -1)
 					{
 						perror("eRROR:\n");
 					}
